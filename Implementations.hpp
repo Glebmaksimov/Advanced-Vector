@@ -235,7 +235,6 @@ template<typename T>
 template<typename... ARGS>
 inline typename Vector<T>::iterator Vector<T>::emplace(const T* pos, ARGS&&... args)
 {
-    // I found a lot of examples implementing this function but they were confusing so I came up with this, is this ok?
 
     const size_t dist = pos - begin();
 
@@ -347,12 +346,7 @@ inline void Vector<T>::pop_back()
 template<typename T>
 inline typename Vector<T>::iterator Vector<T>::erase( const_iterator pos )
 {
-    /* I cloud use other implementation of this function that is
-      pretty shorter than this but I chose this one that I camne up with, is this ok? */
-
-    /*The reason why I chose this is because when I triy erasing on empty Vector and it doesn't
-     crash like the std::vector, instead it just doesn't do anything and neither does it crach
-     when you pass an iterator that is out of range. Not sure if this is good or bad. Any insight? */
+  
 
     const size_t dist = pos - begin();
 
