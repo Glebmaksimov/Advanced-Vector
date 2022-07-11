@@ -67,7 +67,7 @@ public:
 
     // Modifiers
     template<typename... ARGS>
-    void emplace_back(ARGS&&... args); // since C++17 the std::vector::emplace_back() function type is a reference T&, why is that? what does this change brings to the table?
+    void emplace_back(ARGS&&... args); 
     template<typename... ARGS>
     iterator emplace(const T* pos, ARGS&&... args);
     iterator insert(iterator pos, const T& v );
@@ -95,7 +95,6 @@ public:
     // Non-Member Functions
     template<typename H> friend bool operator==(const Vector<H>& lhs, const Vector<H>& rhs);
 
-    // see https://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom
     friend void swap(Vector& first, Vector& second)
     {
         using std::swap;
