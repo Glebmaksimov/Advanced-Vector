@@ -41,7 +41,7 @@ public:
     // element access
     //======================================
     const T& front() const;
-    T& front(); // actually I don't see why would we need this function to be a reference, I think it should be only a const reference, any insight?
+    T& front(); 
     const T& back() const;
     T& back();
     T& operator[ ](size_t i);
